@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-key="page_title">Kemal Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Devicon Link Added -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Элемент для анимации перехода с загрузчиком -->
+    <div id="page-transition-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <header class="header">
+        <div class="logo">
+            Kemal.
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home" data-i18n-key="nav_home"></a></li>
+                <li><a href="#services" data-i18n-key="nav_services"></a></li>
+                <li><a href="#resume" data-i18n-key="nav_resume"></a></li>
+                <li><a href="#work" data-i18n-key="nav_work"></a></li>
+                <li><a href="#contact" data-i18n-key="nav_contact"></a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <label class="theme-switch" for="theme-toggle-checkbox">
+                <input type="checkbox" id="theme-toggle-checkbox" aria-label="Toggle theme">
+                <span class="slider round"></span>
+            </label>
+            <div class="language-selector custom-language-selector">
+                <div class="selected-language">
+                    <span id="selected-lang-text">Русский</span>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+                <div class="language-options">
+                    <div class="language-option" data-value="ru">Русский</div>
+                    <div class="language-option" data-value="en">English</div>
+                    <div class="language-option" data-value="tk">Türkmen</div>
+                </div>
+            </div>
+            <select id="language-switcher" style="display: none;">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+                <option value="tk">Türkmen</option>
+            </select>
+            <button class="hire-me-btn" data-i18n-key="hire_me_btn"></button>
+        </div>
+    </header>
+
+    <div id="content-wrapper">
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero-content">
+                <p class="subtitle" data-i18n-key="home_subtitle"></p>
+                <h1 class="title" data-i18n-key="home_title_part1">
+                    <br><span class="highlight" data-i18n-key="home_title_part2"></span>
+                </h1>
+                <p class="description" data-i18n-key="home_description"></p>
+                <div class="cta-links">
+                    <a href="#" class="btn download-cv" data-i18n-key="download_cv_btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="rotating-border"></div>
+                <div class="rotating-border-inner"></div>
+                <img src="/images/Kemalstudio.jpg" alt="Атаев Кемал" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-item">
+                <span class="stat-number" data-target="1">0</span>
+                <span class="stat-label" data-i18n-key="stats_years_experience"></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="9">0</span>
+                <span class="stat-label" data-i18n-key="stats_projects_completed"></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="18">0</span>
+                <span class="stat-label" data-i18n-key="stats_technologies_mastered"></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="9">0</span>
+                <span class="stat-label" data-i18n-key="stats_code_commits"></span>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="page-section">
+            <h2 class="section-title" data-i18n-key="my_skills_title"></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-number">01</span>
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-arrow-right service-arrow"></i>
+                            <i class="fas fa-circle service-circle"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title" data-i18n-key="service_frontend_dev_title"></h3>
+                    <p class="service-description" data-i18n-key="service_frontend_dev_description"></p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-number">02</span>
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-arrow-right service-arrow"></i>
+                            <i class="fas fa-circle service-circle"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title" data-i18n-key="service_backend_dev_title"></h3>
+                    <p class="service-description" data-i18n-key="service_backend_dev_description"></p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-number">03</span>
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-arrow-right service-arrow"></i>
+                            <i class="fas fa-circle service-circle"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title" data-i18n-key="service_app_dev_title"></h3>
+                    <p class="service-description" data-i18n-key="service_app_dev_description"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="page-section">
+            <div class="resume-content">
+                <div class="resume-sidebar">
+                    <h2 class="sidebar-title" data-i18n-key="resume_why_hire_me_title"></h2>
+                    <p class="sidebar-description" data-i18n-key="resume_why_hire_me_description"></p>
+                    <div class="resume-tabs">
+                        <button class="resume-tab-btn active" data-tab="experience"
+                            data-i18n-key="resume_tab_experience"></button>
+                        <button class="resume-tab-btn" data-tab="education"
+                            data-i18n-key="resume_tab_education"></button>
+                        <button class="resume-tab-btn" data-tab="skills" data-i18n-key="resume_tab_skills"></button>
+                        <button class="resume-tab-btn" data-tab="about" data-i18n-key="resume_tab_about_me"></button>
+                    </div>
+                </div>
+                <div class="resume-details">
+                    <h2 class="details-title" data-i18n-key="resume_experience_title"></h2>
+                    <p class="details-description" data-i18n-key="resume_experience_description"></p>
+                    <div id="experience-content" class="tab-content active">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-date">2024</span>
+                                <h3 class="timeline-title" data-i18n-key="exp_frontend_dev_title"></h3>
+                                <p class="timeline-company" data-i18n-key="exp_frontend_dev_company"></p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2024 - 2025</span>
+                                <h3 class="timeline-title" data-i18n-key="exp_backend_dev_title"></h3>
+                                <p class="timeline-company" data-i18n-key="exp_backend_dev_company"></p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2025</span>
+                                <h3 class="timeline-title" data-i18n-key="exp_fullstack_dev_title"></h3>
+                                <p class="timeline-company" data-i18n-key="exp_fullstack_dev_company"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="education-content" class="tab-content">
+                        <div class="timeline">
+                        </div>
+                    </div>
+                    <div id="skills-content" class="tab-content">
+                        <section class="tech-stack-section">
+                            <details open>
+                                <summary data-i18n-key="skills_frontend">
+                                    <i class="fas fa-caret-down"></i> Frontend Development
+                                </summary>
+                                <div class="badges-container">
+                                    <span class="tech-badge html-badge"><i class="devicon-html5-plain"></i> HTML5</span>
+                                    <span class="tech-badge css-badge"><i class="devicon-css3-plain"></i> CSS3</span>
+                                    <span class="tech-badge sass-badge"><i class="devicon-sass-original"></i> Sass</span>
+                                    <span class="tech-badge js-badge"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                                    <span class="tech-badge jquery-badge"><i class="devicon-jquery-plain"></i> jQuery</span>
+                                    <span class="tech-badge bootstrap-badge"><i class="devicon-bootstrap-plain"></i> Bootstrap</span>
+                                    <span class="tech-badge chartjs-badge">Chart.js</span>
+                                    <span class="tech-badge alpinejs-badge"><i class="devicon-alpinejs-original"></i> Alpine.js</span>
+                                </div>
+                            </details>
+
+                            <details open>
+                                <summary data-i18n-key="skills_backend">
+                                    <i class="fas fa-caret-down"></i> Backend & Databases
+                                </summary>
+                                <div class="badges-container">
+                                    <span class="tech-badge php-badge"><i class="devicon-php-plain"></i> PHP</span>
+                                    <span class="tech-badge laravel-badge"><i class="devicon-laravel-plain"></i> Laravel</span>
+                                    <span class="tech-badge blade-badge"><i class="devicon-blade-plain"></i> Blade</span>
+                                    <span class="tech-badge mysql-badge"><i class="devicon-mysql-plain"></i> MySQL</span>
+                                    <span class="tech-badge postgresql-badge"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                                    <span class="tech-badge python-badge"><i class="devicon-python-plain"></i> Python</span>
+                                </div>
+                            </details>
+
+                            <details open>
+                                <summary data-i18n-key="skills_mobile">
+                                    <i class="fas fa-caret-down"></i> Mobile App Development
+                                </summary>
+                                <div class="badges-container">
+                                    <span class="tech-badge flutter-badge"><i class="devicon-flutter-plain"></i> Flutter</span>
+                                    <span class="tech-badge dart-badge"><i class="devicon-dart-plain"></i> Dart</span>
+                                    <span class="tech-badge android-studio-badge"><i class="devicon-androidstudio-plain"></i> Android Studio</span>
+                                </div>
+                            </details>
+
+                            <details open>
+                                <summary data-i18n-key="skills_tools">
+                                    <i class="fas fa-caret-down"></i> Tools & Environment
+                                </summary>
+                                <div class="badges-container">
+                                    <span class="tech-badge github-badge"><i class="devicon-github-original"></i> GitHub</span>
+                                    <span class="tech-badge figma-badge"><i class="devicon-figma-plain"></i> Figma</span>
+                                    <span class="tech-badge xampp-badge"><i class="devicon-xampp-plain"></i> XAMPP</span>
+                                    <span class="tech-badge phpmyadmin-badge">phpMyAdmin</span>
+                                    <span class="tech-badge postman-badge"><i class="devicon-postman-plain"></i> Postman</span>
+                                    <span class="tech-badge env-badge">.env</span>
+                                    <span class="tech-badge json-badge">JSON</span>
+                                </div>
+                            </details>
+                        </section>
+                        <!-- === END OF UPDATED SECTION === -->
+                    </div>
+                    <div id="about-content" class="tab-content">
+                        <div class="about-info-grid">
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_name_label"></span>
+                                <span class="info-value">Атаев Кемал</span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_phone_label"></span>
+                                <span class="info-value" data-i18n-key="about_phone_value"></span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_experience_label"></span>
+                                <span class="info-value" data-i18n-key="about_experience_value"></span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_skype_label"></span>
+                                <span class="info-value">
+                                    kemalatayew913@outlook.com
+                                </span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_nationality_label"></span>
+                                <span class="info-value" data-i18n-key="about_nationality_value"></span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_email_label"></span>
+                                <span class="info-value">kemalatayew913@gmail.com</span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_freelance_label"></span>
+                                <span class="info-value" data-i18n-key="about_freelance_value_unavailable"></span>
+                            </div>
+                            <div class="info-pair">
+                                <span class="info-label" data-i18n-key="about_languages_label"></span>
+                                <span class="info-value" data-i18n-key="about_languages_value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="page-section">
+            <div class="project-showcase-background">
+                <img id="project-bg-image" src="" alt="Project Background">
+            </div>
+            <h2 class="section-title" data-i18n-key="work_title"></h2>
+
+            <div class="project-showcase-wrapper">
+                <div class="project-showcase-content">
+
+                    <div id="project-info-card" class="project-info-card">
+                        <div class="project-number" id="project-number"></div>
+                        <h3 class="project-main-title" id="project-title"></h3>
+                        <p class="project-main-description" id="project-description"></p>
+                        <p class="project-main-tech" id="project-tech"></p>
+                        <div class="project-main-links">
+                            <a id="project-live-link" href="#" class="project-link-btn" aria-label="Live Demo"
+                                target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a id="project-github-link" href="#" class="project-link-btn" aria-label="GitHub"
+                                target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="project-slider" class="work-project-slider">
+                        <div class="slider-header">
+                            <div class="slider-header-dots">
+                                <span class="slider-header-dot red"></span>
+                                <span class="slider-header-dot yellow"></span>
+                                <span class="slider-header-dot green"></span>
+                            </div>
+                            <div class="slider-zoom-controls">
+                                <button class="zoom-btn zoom-out" aria-label="Уменьшить">-</button>
+                                <button class="zoom-btn zoom-in" aria-label="Увеличить">+</button>
+                            </div>
+                        </div>
+                        <div class="slider-image-wrapper">
+                            <img id="project-main-image" src="" alt="Превью проекта" data-zoom="1">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="project-navigation">
+                    <button class="project-nav-btn prev-project" aria-label="Previous Project">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <ul id="project-selector" class="project-selector">
+                        <!-- Сюда будут добавлены названия проектов -->
+                    </ul>
+                    <button class="project-nav-btn next-project" aria-label="Next Project">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section">
+            <h2 class="section-title" data-i18n-key="contact_title"></h2>
+            <div class="contact-grid">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrbazalk" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="Имя" placeholder="Имя" data-i18n-key="form_firstname_placeholder"
+                            required>
+                        <input type="text" name="Фамилия" placeholder="Фамилия"
+                            data-i18n-key="form_lastname_placeholder" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="Email" placeholder="Email адрес"
+                            data-i18n-key="form_email_placeholder" required>
+                        <input type="tel" name="Телефон" placeholder="Номер телефона"
+                            data-i18n-key="form_phone_placeholder">
+                    </div>
+                    <select name="Услуга" class="form-select" required>
+                        <option value="" disabled selected data-i18n-key="form_select_service">Выберите услугу</option>
+                        <option value="backend_developer">Backend Developer</option>
+                        <option value="frontend_developer">Frontend Developer</option>
+                        <option value="app_developer">App Developer</option>
+                        <option value="full_stack_developer">Full Stack Developer</option>
+                    </select>
+                    <textarea name="Сообщение" placeholder="Напишите ваше сообщение здесь." rows="5"
+                        data-i18n-key="form_message_placeholder" required></textarea>
+                    <button type="submit" class="send-message-btn" data-i18n-key="form_send_message_btn">Отправить
+                        сообщение</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-block">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span data-i18n-key="contact_phone_label">Телефон</span>
+                            <p data-i18n-key="contact_phone_value">+99364005374</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span data-i18n-key="contact_email_label">Email</span>
+                            <p data-i18n-key="contact_email_value">kemalatayew913@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span data-i18n-key="contact_address_label">Адрес</span>
+                            <p data-i18n-key="contact_address_value">Ашхабад, Туркменистан</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <i class="fab fa-telegram-plane"></i>
+                        <div>
+                            <span data-i18n-key="contact_telegram_label">Telegram</span>
+                            <p>@kemal_studio</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span data-i18n-key="contact_teams_label">Whatsapp</span>
+                            <p>+99364005374</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="form-status"></p>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            async function handleSubmit(event) {
+                event.preventDefault();
+                const data = new FormData(event.target);
+                const url = event.target.action;
+                navigator.sendBeacon(url, data);
+                form.reset();
+                window.location.href = 'success.html';
+            }
+            if (form) {
+                form.addEventListener("submit", handleSubmit);
+            }
+        });
+    </script>
+</body>
+
+</html>
